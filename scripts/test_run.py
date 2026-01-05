@@ -5,8 +5,12 @@ Ingests a sample document and runs `search_with_reranking()`.
 If Postgres is unavailable, falls back to an in-memory test using the
 fallback embedding and reranker in `rag.py`.
 """
-from dotenv import load_dotenv
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    # dotenv is optional for tests and local runs
+    pass
 
 SAMPLE_TEXT = (
     "Neural networks are computing systems inspired by biological neural networks. "
