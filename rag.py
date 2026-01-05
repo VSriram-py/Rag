@@ -1,11 +1,9 @@
 import os
 import math
 import hashlib
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except Exception:
-    pass
+from dotenv import load_dotenv
+
+load_dotenv()
 
 EMBEDDING_DIM = 1536
 

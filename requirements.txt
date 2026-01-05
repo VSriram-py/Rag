@@ -1,4 +1,5 @@
 pydantic-ai
+python-dotenv
 psycopg2-binary
 pgvector
 openai
