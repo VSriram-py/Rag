@@ -1,0 +1,6 @@
+pydantic-ai
+psycopg2-binary
+pgvector
+openai
+python-dotenv
+pytest
