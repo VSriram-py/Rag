@@ -7,7 +7,6 @@ load_dotenv()
 
 EMBEDDING_DIM = 1536
 
-
 def _pseudo_embedding(text: str):
     h = hashlib.sha256(text.encode('utf-8')).digest()
     vals = [(b / 255.0) for b in h]
@@ -82,7 +81,7 @@ def get_conn():
 def search_with_reranking(query: str) -> str:
     """Two-stage search: vector retrieval (DB) then re-rank with cosine.
 
-    If the DB is not available this raises an Exception so callers can
+    If DB is not available this raises an Exception so callers can
     fall back to alternative behavior.
     """
     conn = get_conn()
